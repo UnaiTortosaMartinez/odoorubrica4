@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- This Menu Item must have a parent and an action -->
+
+<record model="ir.actions.act_window" id="estudiante_list_action">
+<field name="name">estudiante</field>
+<field name="res_model">persona</field>
+<field name="view_mode">tree,form</field>
+</record>
+
+<record model="ir.actions.act_window" id="portatil_list_action">
+<field name="name">portatil</field>
+<field name="res_model">portatil</field>
+<field name="view_mode">tree,form</field>
+</record>
+
+
+<menuitem name="modeloexamen" id="touring_menu_root"/>
+<menuitem name="estudiante" id="touring_menu_estudiante" parent="touring_menu_root"/>
+<menuitem name="listado de estudiante" id="touring_list_estudiante" parent="touring_menu_estudiante" action="estudiante_list_action"/>
+<menuitem name="portatil" id="touring_menu_portatil" parent="touring_menu_root"/>
+<menuitem name="listado de portatil" id="touring_list_portatil" parent="touring_menu_portatil" action="portatil_list_action"/>
+
+
+
+</odoo>
+
